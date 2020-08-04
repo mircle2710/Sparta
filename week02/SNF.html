@@ -1,0 +1,815 @@
+<html lang="en">
+
+    <body data-sidebar="dark">
+        <div id="preloader" style="display: none;">
+            <div id="status" style="display: none;">
+                <div class="spinner-chase">
+                    <div class="chase-dot"></div>
+                    <div class="chase-dot"></div>
+                    <div class="chase-dot"></div>
+                    <div class="chase-dot"></div>
+                    <div class="chase-dot"></div>
+                    <div class="chase-dot"></div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Begin page -->
+        <div id="layout-wrapper">
+
+            <header id="page-topbar">
+                <div class="navbar-header">
+                    <div class="d-flex">
+                        <!-- LOGO -->
+                        <div class="navbar-brand-box">
+                            <a href="/" class="logo logo-light">
+                                <span class="logo-sm">
+                                    <img src="html/snf/img/logo_mini.png" alt="" height="22">
+                                </span>
+                                <span class="logo-lg">
+                                    <img src="html/snf/img/logo_main.png" alt="" style="width:100%">
+                                </span>
+                            </a>
+                        </div>
+
+                        <button type="button" class="btn btn-sm px-3 font-size-16 header-item waves-effect"
+                                id="vertical-menu-btn">
+                            <i class="lnr lnr-menu"></i>
+                        </button>
+
+
+                        <form action="/?pg=mg_mb_info" method="post" class="app-search d-none d-lg-block">
+                            <div class="position-relative">
+                                <input type="text" class="form-control" placeholder="회원 검색." name="name_srch">
+                                <span class="bx bx-search-alt"></span>
+                            </div>
+                        </form>
+
+
+                    </div>
+
+                    <div class="d-flex">
+
+                        <div class="dropdown d-inline-block d-lg-none ml-2">
+                            <button type="button" class="btn header-item noti-icon waves-effect"
+                                    id="page-header-search-dropdown" data-toggle="dropdown" aria-haspopup="true"
+                                    aria-expanded="false">
+                                <i class="lnr lnr-magnifier"></i>
+                            </button>
+                            <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right p-0"
+                                 aria-labelledby="page-header-search-dropdown">
+
+                                <form class="p-3">
+                                    <div class="form-group m-0">
+                                        <div class="input-group">
+                                            <input type="text" class="form-control" placeholder="회원 검색"
+                                                   aria-label="Recipient's username">
+                                            <div class="input-group-append">
+                                                <button class="btn btn-primary" type="submit"><i
+                                                        class="bx bx-search-alt"></i></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+
+
+                        <div class="dropdown d-inline-block">
+                            <button type="button" class="btn header-item noti-icon waves-effect"
+                                    id="page-header-notifications-dropdown" data-toggle="dropdown" aria-haspopup="true"
+                                    aria-expanded="false">
+                                <i class="lnr lnr-cog"></i>
+
+
+                            </button>
+                            <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right p-0"
+                                 aria-labelledby="page-header-notifications-dropdown">
+                                <div class="p-3">
+                                    <div class="row align-items-center">
+                                        <div class="col">
+                                            <h6 class="m-0"> 관리자 메뉴 </h6>
+                                        </div>
+                                        <div class="col-auto">
+                                            <a href="#!" class="small">Manager</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div data-simplebar="init">
+                                    <div class="simplebar-wrapper" style="margin: 0px;">
+                                        <div class="simplebar-height-auto-observer-wrapper">
+                                            <div class="simplebar-height-auto-observer"></div>
+                                        </div>
+                                        <div class="simplebar-mask">
+                                            <div class="simplebar-offset" style="right: 0px; bottom: 0px;">
+                                                <div class="simplebar-content-wrapper"
+                                                     style="height: auto; overflow: hidden;">
+                                                    <div class="simplebar-content" style="padding: 0px;">
+                                                        <a href="/?pg=mg_mb_req" class="text-reset notification-item">
+                                                            <div class="media">
+                                                                <div class="avatar-xs mr-1">
+                                                                    <span class="lnr lnr-chevron-right-circle"></span>
+                                                                </div>
+                                                                <div class="media-body">
+                                                                    <div class="font-size-12 text-muted">
+                                                                        <p class="mb-1">입금 처리</p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </a>
+                                                        <a href="/?pg=mg_mb_info" class="text-reset notification-item">
+                                                            <div class="media">
+                                                                <div class="avatar-xs mr-1">
+                                                                    <span class="lnr lnr-chevron-right-circle"></span>
+                                                                </div>
+                                                                <div class="media-body">
+                                                                    <div class="font-size-12 text-muted">
+                                                                        <p class="mb-1">회원계정 전환</p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </a>
+                                                        <a href="/?pg=mg_setting" class="text-reset notification-item">
+                                                            <div class="media">
+                                                                <div class="avatar-xs mr-1">
+                                                                    <span class="lnr lnr-chevron-right-circle"></span>
+                                                                </div>
+                                                                <div class="media-body">
+                                                                    <div class="font-size-12 text-muted">
+                                                                        <p class="mb-1">환경 설정</p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </a>
+                                                        <a href="/?pg=mg_with_req" class="text-reset notification-item">
+                                                            <div class="media">
+                                                                <div class="avatar-xs mr-1">
+                                                                    <span class="lnr lnr-chevron-right-circle"></span>
+                                                                </div>
+                                                                <div class="media-body">
+                                                                    <div class="font-size-12 text-muted">
+                                                                        <p class="mb-1">출금요청 리스트</p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </a>
+
+                                                        <a href="/?pg=mg_reg_cent" class="text-reset notification-item">
+                                                            <div class="media">
+                                                                <div class="avatar-xs mr-1">
+                                                                    <span class="lnr lnr-chevron-right-circle"></span>
+                                                                </div>
+                                                                <div class="media-body">
+                                                                    <div class="font-size-12 text-muted">
+                                                                        <p class="mb-1">지점 관리</p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </a>
+
+                                                        <a href="/?pg=mg_cent_fee" class="text-reset notification-item">
+                                                            <div class="media">
+                                                                <div class="avatar-xs mr-1">
+                                                                    <span class="lnr lnr-chevron-right-circle"></span>
+                                                                </div>
+                                                                <div class="media-body">
+                                                                    <div class="font-size-12 text-muted">
+                                                                        <p class="mb-1">월별 지점매출/수당</p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </a>
+
+                                                        <a href="/?pg=mg_mb_cent" class="text-reset notification-item">
+                                                            <div class="media">
+                                                                <div class="avatar-xs mr-1">
+                                                                    <span class="lnr lnr-chevron-right-circle"></span>
+                                                                </div>
+                                                                <div class="media-body">
+                                                                    <div class="font-size-12 text-muted">
+                                                                        <p class="mb-1">소속지점 변경</p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </a>
+
+                                                        <a href="/?pg=mg_price" class="text-reset notification-item">
+                                                            <div class="media">
+                                                                <div class="avatar-xs mr-1">
+                                                                    <span class="lnr lnr-chevron-right-circle"></span>
+                                                                </div>
+                                                                <div class="media-body">
+                                                                    <div class="font-size-12 text-muted">
+                                                                        <p class="mb-1">SNF 가격등록</p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </a>
+
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="simplebar-placeholder" style="width: auto; height: 280px;"></div>
+                                    </div>
+                                    <div class="simplebar-track simplebar-horizontal" style="visibility: hidden;">
+                                        <div class="simplebar-scrollbar"
+                                             style="transform: translate3d(0px, 0px, 0px); display: none;"></div>
+                                    </div>
+                                    <div class="simplebar-track simplebar-vertical" style="visibility: hidden;">
+                                        <div class="simplebar-scrollbar"
+                                             style="transform: translate3d(0px, 0px, 0px); display: none;"></div>
+                                    </div>
+                                </div>
+                                <div class="p-2 border-top">
+                                    <a class="btn btn-sm btn-link font-size-14 btn-block text-center"
+                                       href="/?action=snf_up&amp;dt=get_login&amp;id=comp&amp;pw=6077&amp;cur=mg_mb_info">
+                                        <i class="lnr lnr-redo" style="font-size:12px;"></i> 관리자 계정 복귀
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="dropdown d-inline-block">
+                            <button type="button" class="btn header-item waves-effect" id="page-header-user-dropdown"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <img class="rounded-circle header-profile-user" src="html/snf/img/model.png"
+                                     alt="member">
+                            </button>
+                            <div class="dropdown-menu dropdown-menu-right">
+                                <!-- item-->
+                                <a class="dropdown-item" href="/?pg=info_1"><i
+                                        class="bx bx-user font-size-16 align-middle mr-1"></i> Profile</a>
+                                <a class="dropdown-item" href="/?pg=mony_1"><i
+                                        class="bx bx-wallet font-size-16 align-middle mr-1"></i> My Wallet</a>
+                                <a class="dropdown-item" href="/?pg=with"><i
+                                        class="bx bx-lock-open font-size-16 align-middle mr-1"></i> Withdrawal</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item text-danger" href="/?action=snf_up&amp;dt=logout"><i
+                                        class="bx bx-power-off font-size-16 align-middle mr-1 text-danger"></i>
+                                    Logout</a>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+            </header>
+
+            <!-- ========== Left Sidebar Start ========== -->
+            <div class="vertical-menu mm-active">
+
+                <div data-simplebar="init" class="h-100 mm-show">
+                    <div class="simplebar-wrapper" style="margin: 0px;">
+                        <div class="simplebar-height-auto-observer-wrapper">
+                            <div class="simplebar-height-auto-observer"></div>
+                        </div>
+                        <div class="simplebar-mask">
+                            <div class="simplebar-offset" style="right: 0px; bottom: 0px;">
+                                <div class="simplebar-content-wrapper" style="height: auto; overflow: hidden;">
+                                    <div class="simplebar-content" style="padding: 0px;">
+
+                                        <!--- Sidemenu -->
+                                        <div id="sidebar-menu" class="mm-active">
+                                            <!-- Left Menu Start -->
+                                            <ul class="metismenu list-unstyled mm-show" id="side-menu">
+                                                <li class="menu-title">Menu</li>
+
+                                                <li class="home mm-active active">
+                                                    <a href="/" class="waves-effect active">
+                                                        <i class="bx bx-calendar"></i><span
+                                                            class="badge badge-pill badge-info float-right">03</span>
+                                                        <span>Dashboards</span>
+                                                    </a>
+                                                </li>
+
+
+                                                <!--li>
+                                                    <a href="javascript: void(0);" class="waves-effect">
+                                                        <i class="bx bx-home-circle"></i><span class="badge badge-pill badge-info float-right">03</span>
+                                                        <span>Dashboards</span>
+                                                    </a>
+                                                    <ul class="sub-menu" aria-expanded="false">
+                                                        <li><a href="index.html">Default</a></li>
+                                                        <li><a href="dashboard-saas.html">Saas</a></li>
+                                                        <li><a href="dashboard-crypto.html">Crypto</a></li>
+                                                    </ul>
+                                                </li-->
+
+                                                <li class="info">
+                                                    <a href="javascript: void(0);" class="has-arrow waves-effect">
+                                                        <i class="bx bx-layout"></i>
+                                                        <span>Profile</span>
+                                                    </a>
+                                                    <ul class="sub-menu mm-collapse" aria-expanded="false">
+                                                        <li><a class="info_1" href="/?pg=info_1">Profile</a></li>
+                                                        <li><a class="info_2" href="/?pg=info_2">Edit Profile</a></li>
+                                                        <li><a class="info_3" href="/?pg=info_3">Change Password</a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+
+                                                <li class="memb">
+                                                    <a href="javascript: void(0);" class="has-arrow waves-effect">
+                                                        <i class="bx bx-store"></i>
+                                                        <span>Members</span>
+                                                    </a>
+                                                    <ul class="sub-menu mm-collapse" aria-expanded="false">
+                                                        <li><a class="memb_1" href="/?pg=memb_1">Referal Members</a>
+                                                        </li>
+                                                        <li><a class="memb_2" href="/?pg=memb_2">Indirect Members</a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+
+                                                <li class="inv">
+                                                    <a href="javascript: void(0);" class="has-arrow waves-effect">
+                                                        <i class="bx bx-bitcoin"></i>
+                                                        <span>Manage Investment</span>
+                                                    </a>
+                                                    <ul class="sub-menu mm-collapse" aria-expanded="false">
+                                                        <li><a class="inv_1" href="/?pg=inv_1">Investment Overview</a>
+                                                        </li>
+                                                        <li><a class="inv_2" href="/?pg=inv_2">Investment report</a>
+                                                        </li>
+                                                        <li><a class="inv_3" href="/?pg=inv_3">Increase Investment</a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+
+                                                <li class="tree">
+                                                    <a href="javascript: void(0);" class="has-arrow waves-effect">
+                                                        <i class="bx bx-bitcoin"></i>
+                                                        <span>Network</span>
+                                                    </a>
+                                                    <ul class="sub-menu mm-collapse" aria-expanded="false">
+                                                        <li><a class="tree_1" href="/?pg=tree_1">Referal Network</a>
+                                                        </li>
+                                                        <li><a class="tree_2" href="/?pg=tree_2">Indirect Network</a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+
+                                                <li class="menu-title">Apps</li>
+
+                                                <li>
+                                                    <a href="/?pg=clas" class=" waves-effect">
+                                                        <i class="bx bx-calendar"></i>
+                                                        <span>Position History</span>
+                                                    </a>
+                                                </li>
+
+                                                <li class="mony">
+                                                    <a href="javascript: void(0);" class="has-arrow waves-effect">
+                                                        <i class="bx bx-bitcoin"></i>
+                                                        <span>Bonus management</span>
+                                                    </a>
+                                                    <ul class="sub-menu mm-collapse" aria-expanded="false">
+                                                        <li><a class="mony_1" href="/?pg=mony_1">Total In &amp; Out</a>
+                                                        </li>
+                                                        <li><a class="mony_2" href="/?pg=mony_2">Income Part</a></li>
+                                                        <li><a class="mony_3" href="/?pg=mony_3">Outward Part</a></li>
+
+
+                                                        <li><a class="mony_4" href="/?pg=mony_4">Center Bonus</a></li>
+
+                                                    </ul>
+                                                </li>
+
+                                                <li class="calc">
+                                                    <a href="javascript: void(0);" class="has-arrow waves-effect">
+                                                        <i class="bx bx-bitcoin"></i>
+                                                        <span>Bonus Details</span>
+                                                    </a>
+                                                    <ul class="sub-menu mm-collapse" aria-expanded="false">
+                                                        <li><a class="calc_1" href="/?pg=calc_1">Daily bonus</a></li>
+                                                        <li><a class="calc_2" href="/?pg=calc_2">Daily Matching</a></li>
+                                                        <li><a class="calc_3" href="/?pg=calc_3">Referal Bonus</a></li>
+                                                        <li><a class="calc_4" href="/?pg=calc_4">Indirect Bonus</a></li>
+                                                        <li><a class="calc_5" href="/?pg=calc_5">Position Bonus</a></li>
+                                                    </ul>
+                                                </li>
+
+                                                <li class="snf">
+                                                    <a href="javascript: void(0);" class="has-arrow waves-effect">
+                                                        <i class="bx bx-bitcoin"></i>
+                                                        <span>SNF management</span>
+                                                    </a>
+                                                    <ul class="sub-menu mm-collapse" aria-expanded="false">
+                                                        <li><a class="snf_1" href="/?pg=snf_1">SNF History</a></li>
+                                                        <li><a class="snf_2" href="/?pg=snf_2">SNF Withdrawal</a></li>
+                                                    </ul>
+                                                </li>
+
+                                                <li>
+                                                    <a href="/?pg=with" class=" waves-effect">
+                                                        <i class="bx bx-calendar"></i>
+                                                        <span>Request Withdrawal</span>
+                                                    </a>
+                                                </li>
+
+                                                <li class="promo">
+                                                    <a href="javascript: void(0);" class="has-arrow waves-effect">
+                                                        <i class="bx bx-bitcoin"></i>
+                                                        <span>Referal management</span>
+                                                    </a>
+                                                    <ul class="sub-menu mm-collapse" aria-expanded="false">
+                                                        <li><a class="promo_1" href="/?pg=promo_1">Add new Member</a>
+                                                        </li>
+                                                        <li><a class="promo_2" href="/?pg=promo_2">Referral Code</a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+
+                                                <li>
+                                                    <a href="/?action=snf_up&amp;dt=logout" class=" waves-effect">
+                                                        <i class="bx bx-calendar"></i>
+                                                        <span>Logout</span>
+                                                    </a>
+                                                </li>
+
+                                            </ul>
+                                        </div>
+                                        <!-- Sidebar -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="simplebar-placeholder" style="width: auto; height: 793px;"></div>
+                    </div>
+                    <div class="simplebar-track simplebar-horizontal" style="visibility: hidden;">
+                        <div class="simplebar-scrollbar"
+                             style="transform: translate3d(0px, 0px, 0px); display: none;"></div>
+                    </div>
+                    <div class="simplebar-track simplebar-vertical" style="visibility: hidden;">
+                        <div class="simplebar-scrollbar"
+                             style="transform: translate3d(0px, 0px, 0px); display: none; height: 191px;"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="main-content">
+
+
+                <div class="page-content">
+                    <div class="container-fluid">
+
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="card">
+                                    <div class="card-body p-0">
+                                        <div class="row">
+                                            <div class="col-lg-6">
+                                                <div class="media">
+                                                    <div class="mr-3">
+                                                        <img src="html/snf/img/model.png" alt=""
+                                                             class="avatar-md rounded-circle img-thumbnail">
+                                                    </div>
+                                                    <div class="media-body align-self-center">
+                                                        <div class="text-muted">
+                                                            <p class="mb-2">Welcome To Shining Future</p>
+                                                            <h5 class="mb-1">회사1 </h5>
+                                                            <p class="mb-0 text-danger"><a href="/?pg=inv_3"
+                                                                                           class="btn btn-sm btn-outline-info waves-effect waves-light">Reg.
+                                                                ReInvest</a> Class : 4 STAR </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-lg-6 align-self-center">
+                                                <div class="text-lg-center mt-4 mt-lg-0">
+                                                    <div class="row">
+                                                        <div class="col-3">
+                                                            <div>
+                                                                <p class="text-truncate mb-2 text-danger">Left Sales</p>
+
+
+                                                                <h5 class="mb-0">$ 2,713,500</h5>
+                                                            </div>
+                                                        </div>
+
+
+                                                        <div class="col-3">
+                                                            <div>
+                                                                <p class="text-truncate mb-2 text-danger">Right
+                                                                    Sales</p>
+                                                                <h5 class="mb-0">$ 0</h5>
+
+                                                            </div>
+                                                        </div>
+
+
+                                                        <div class="col-3">
+                                                            <div>
+                                                                <p class="text-success text-truncate mb-2">Left
+                                                                    Carry</p>
+                                                                <h5 class="mb-0">$ 2,713,500</h5>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-3">
+                                                            <div>
+                                                                <p class="text-success text-truncate mb-2">Right
+                                                                    Carry</p>
+                                                                <h5 class="mb-0">$ 0</h5>
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                        <!-- end row -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end row -->
+
+
+                        <div class="row">
+                            <div class="col-xl-3 col-md-6">
+                                <div class="card mini-stat bg-primary">
+                                    <div class="card-body mini-stat-img p-0">
+                                        <div class="mini-stat-icon">
+                                            <i class="lnr lnr-map-marker float-right"></i>
+                                        </div>
+                                        <div class="text-white">
+                                            <h6 class="text-uppercase mb-2 font-size-16">Investment</h6>
+                                            <h2 class="mb-2">$ 0</h2>
+                                            <span class="badge badge-info"> Lv </span> <span
+                                                class="ml-2">Investment</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 col-md-6">
+                                <div class="card mini-stat bg-primary">
+                                    <div class="card-body mini-stat-img p-0">
+                                        <div class="mini-stat-icon">
+                                            <i class="lnr lnr-chart-bars float-right"></i>
+                                        </div>
+                                        <div class="text-white">
+                                            <h6 class="text-uppercase mb-2 font-size-16">Revenue</h6>
+                                            <h2 class="mb-2">$ 163</h2>
+                                            <span class="badge badge-danger"> 300% </span> <span class="ml-2">Return On Investment </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 col-md-6">
+                                <div class="card mini-stat bg-primary">
+                                    <div class="card-body mini-stat-img p-0">
+                                        <div class="mini-stat-icon">
+                                            <i class="lnr lnr-users float-right"></i>
+                                        </div>
+                                        <div class="text-white">
+                                            <h6 class="text-uppercase mb-2 font-size-16">Referral</h6>
+                                            <h2 class="mb-2">1 MBs</h2>
+                                            <span class="badge badge-warning"> 1 </span> <span
+                                                class="ml-2">Referrals</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 col-md-6">
+                                <div class="card mini-stat bg-primary">
+                                    <div class="card-body mini-stat-img p-0">
+                                        <div class="mini-stat-icon">
+                                            <i class="lnr lnr-cart float-right"></i>
+                                        </div>
+                                        <div class="text-white">
+                                            <h6 class="text-uppercase mb-2 font-size-16">Total Sales</h6>
+                                            <h2 class="mb-2">$ 2,713,500</h2>
+                                            <span class="badge badge-info"> +89% </span> <span class="ml-2">Sales</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end row -->
+
+                        <div class="row">
+
+                            <div class="col-xl-3">
+
+
+                                <div class="card" style="height:500px;">
+                                    <div class="card-body">
+                                        <h4 class="card-title mb-3">New Members(+5)</h4>
+                                        <div class="inbox-wid">
+
+
+                                            <a href="#" class="text-dark">
+                                                <div class="inbox-item">
+                                                    <div class="inbox-item-img float-left mr-3"><img
+                                                            src="html/snf/img/logo_gray.png"
+                                                            class="avatar-sm rounded-circle" alt=""></div>
+                                                    <h6 class="inbox-item-author mt-0 mb-1 font-size-16 text-left">
+                                                        s1708 </h6>
+                                                    <p class="inbox-item-text text-muted mb-0"><label
+                                                            class="badge badge-danger">new</label> Product : $ 500 </p>
+                                                    <p class="inbox-item-date text-muted">01:11:12</p>
+                                                </div>
+                                            </a>
+
+
+                                            <a href="#" class="text-dark">
+                                                <div class="inbox-item">
+                                                    <div class="inbox-item-img float-left mr-3"><img
+                                                            src="html/snf/img/logo_gray.png"
+                                                            class="avatar-sm rounded-circle" alt=""></div>
+                                                    <h6 class="inbox-item-author mt-0 mb-1 font-size-16 text-left">
+                                                        s7283 </h6>
+                                                    <p class="inbox-item-text text-muted mb-0"><label
+                                                            class="badge badge-danger">new</label> Product : $ 500 </p>
+                                                    <p class="inbox-item-date text-muted">01:10:51</p>
+                                                </div>
+                                            </a>
+
+
+                                            <a href="#" class="text-dark">
+                                                <div class="inbox-item">
+                                                    <div class="inbox-item-img float-left mr-3"><img
+                                                            src="html/snf/img/logo_gray.png"
+                                                            class="avatar-sm rounded-circle" alt=""></div>
+                                                    <h6 class="inbox-item-author mt-0 mb-1 font-size-16 text-left">
+                                                        yil0933 </h6>
+                                                    <p class="inbox-item-text text-muted mb-0"><label
+                                                            class="badge badge-danger">new</label> Product : $ 500 </p>
+                                                    <p class="inbox-item-date text-muted">01:10:01</p>
+                                                </div>
+                                            </a>
+
+
+                                            <a href="#" class="text-dark">
+                                                <div class="inbox-item">
+                                                    <div class="inbox-item-img float-left mr-3"><img
+                                                            src="html/snf/img/logo_gray.png"
+                                                            class="avatar-sm rounded-circle" alt=""></div>
+                                                    <h6 class="inbox-item-author mt-0 mb-1 font-size-16 text-left">
+                                                        swi8933 </h6>
+                                                    <p class="inbox-item-text text-muted mb-0"><label
+                                                            class="badge badge-danger">new</label> Product : $ 500 </p>
+                                                    <p class="inbox-item-date text-muted">01:09:31</p>
+                                                </div>
+                                            </a>
+
+
+                                            <a href="#" class="text-dark">
+                                                <div class="inbox-item">
+                                                    <div class="inbox-item-img float-left mr-3"><img
+                                                            src="html/snf/img/logo_gray.png"
+                                                            class="avatar-sm rounded-circle" alt=""></div>
+                                                    <h6 class="inbox-item-author mt-0 mb-1 font-size-16 text-left">
+                                                        ok5679 </h6>
+                                                    <p class="inbox-item-text text-muted mb-0"><label
+                                                            class="badge badge-danger">new</label> Product : $ 500 </p>
+                                                    <p class="inbox-item-date text-muted">01:09:07</p>
+                                                </div>
+                                            </a>
+
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="col-xl-6">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h4 class="card-title mb-4">Weekly Revenue Chart</h4>
+
+                                        <div class="row text-center mt-4">
+                                            <div class="col-12">
+                                                <h5 class="font-size-20">Total $ 425</h5>
+                                                <p class="text-muted">Weekly Bonus</p>
+                                            </div>
+                                        </div>
+
+                                        <div id="morris-area-example" class="morris-charts morris-charts-height"
+                                             dir="ltr"></div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="col-xl-3">
+                                <div class="card" style="height:500px;">
+                                    <div class="card-body">
+                                        <h4 class="card-title mb-4">Recently Income</h4>
+
+                                        <ol class="activity-feed mb-0">
+
+
+                                            <li class="feed-item">
+                                                <div class="feed-item-list">
+                                                    <span class="date">2020.07.28 00:06:13</span>
+                                                    <span class="activity-text">
+
+
+		- Daily Matching Bonus<br>- $      0 (s1708 Daily Matching(9))
+
+
+																							</span>
+                                                </div>
+                                            </li>
+
+
+                                            <li class="feed-item">
+                                                <div class="feed-item-list">
+                                                    <span class="date">2020.07.28 00:06:13</span>
+                                                    <span class="activity-text">
+
+
+		- Daily Matching Bonus<br>- $      0 (s7283 Daily Matching(9))
+
+
+																							</span>
+                                                </div>
+                                            </li>
+
+
+                                            <li class="feed-item">
+                                                <div class="feed-item-list">
+                                                    <span class="date">2020.07.28 00:06:13</span>
+                                                    <span class="activity-text">
+
+
+		- Daily Matching Bonus<br>- $      0 (yil0933 Daily Matching(9))
+
+
+																							</span>
+                                                </div>
+                                            </li>
+
+
+                                        </ol>
+
+                                        <div class="text-center">
+                                            <a href="/?pg=mony_1" class="btn btn-sm btn-primary">More..</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end row -->
+                        <style>
+                            .card {
+                                padding: 1.5rem;
+                            }
+                        </style>
+                        <footer class="footer">
+                            <div class="container-fluid">
+                                <div class="row">
+                                    <div class="col-12 text-center">
+                                        ⓒ 2020 Shining Future
+                                    </div>
+                                </div>
+                            </div>
+                        </footer>
+                    </div>
+                    <!-- end main content-->
+                </div>
+                <!-- END layout-wrapper -->
+                <!-- Right bar overlay-->
+                <div class="rightbar-overlay"></div>
+
+                <!-- JAVASCRIPT -->
+                <script src="html/snf/js/jquery.min.js"></script>
+                <script src="html/snf/js/bootstrap.bundle.min.js"></script>
+                <script src="html/snf/js/metisMenu.min.js"></script>
+                <script src="html/snf/js/simplebar.min.js"></script>
+                <script src="html/snf/js/waves.min.js"></script>
+
+                <!-- apexcharts -->
+                <script src="html/snf/js/apexcharts.min.js"></script>
+
+                <!-- Saas dashboard init -->
+                <script src="html/snf/js/saas-dashboard.init.js"></script>
+
+                <script src="html/snf/js/app.js"></script>
+
+
+                <script>
+                    $(".home").addClass("mm-active");
+                    //$(".home").find(".collapse").addClass("show");
+                    $('.home > .has-arrow').addClass('mm-active');
+                    $('.home > .sub-menu').addClass('mm-collapse mm-show');
+                    $(".home").addClass("active");
+                </script>
+            </div>
+        </div>
+        <svg id="SvgjsSvg1001" width="2" height="0" xmlns="http://www.w3.org/2000/svg" version="1.1"
+             xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs"
+             style="overflow: hidden; top: -100%; left: -100%; position: absolute; opacity: 0;">
+            <defs id="SvgjsDefs1002"></defs>
+            <polyline id="SvgjsPolyline1003" points="0,0"></polyline>
+            <path id="SvgjsPath1004" d="M0 0 "></path>
+        </svg>
+    </body>
+</html>
